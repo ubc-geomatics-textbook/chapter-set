@@ -1,0 +1,20 @@
+---
+title: "An Open Geomatics Textbook"
+author: "UBC"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo:  ubc-geomatics-textbook/book
+url: 'https\://github.com/ubc-geomatics-textbook/chapter-set/'
+description: "Advancing teaching and learning in geomatics at UBC"
+---
+
+# Preface {-}
+
+
+## Contacts
+
+Paul Pickell, paul.pickell@ubc.ca    
