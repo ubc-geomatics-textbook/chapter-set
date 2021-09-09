@@ -18,25 +18,21 @@ Elevation data are frequently collected in a raster format. In this chapter, we 
 
 ### Key Terms {-}
 
-Digital Elevation Model, Digital Vertical Model, Digital Terrain Model, Digital Surface Model, Anaglyph, High-Pass Filter, Low-Pass Filter, Focal Function, Local Function, Global Function, Zonal Function
+Digital Elevation Model, Digital Vertical Model, Digital Terrain Model, Digital Surface Model, Anaglyph, High-Pass Filter, Low-Pass Filter, Focal Function, Local Function, Global Function, Zonal Function, Derived Raster, Classified Raster
 
 ## Raster analysis
 
-### Base data
+Raster analysis is the process of deriving, classifying, and combining raster data layers together. Although any given raster analysis may involve one or all of these steps, one thing that all raster analyses have in common is what is known as base data. **Base data** can be raster or vector data and represent some existing information about the area of interest. For example, you may have a digital air photo or other base map that you want to derive, classify, and/or combine with other information.
 
-### Derived data
+We can perform calculations on rasters to **derive** new rasters. For example, we could add, subtract, divide, or multiply a constant value to all cells in a raster. As well, we can calculate more complex indices or functions from a single raster, which we will see some examples of later in this chapter. 
 
-### Classified data
+We can also **classify** rasters, a process that involves modifying the values of the cells in the input raster based on some conditions to produce a new raster with new values. Sometimes this process is also referred to as **reclassification**. For example, maybe we desire a raster with binary values or 1 or 0 based on the condition that the value of a raster cell is greater than 10 (=1) or less than or equal to 10 (=0). Then, if a cell value in the input raster is 9, then the value for that cell in the output raster will be 0, and so on.
 
-### Combined data
+Finally, after deriving and classifying our rasters, we often need to **combine** or overlay them in order to solve some problem. Suppose we have a binary raster that represents land (=1) or water (=0) and we have another binary raster that represents good planting conditions (=1) and poor planting conditions (=0). Then, if we multiply these two rasters together, we will identify land that has good planting conditions (=1) across our area of interest. As you can see, combining raster data together can be a powerful tool for solving environmental management problems. Although it is common to reclassify rasters into binary rasters for a simple multiplication overlay like in the previous example, it is also possible to weight several rasters during combination and produce a continuous value in the output. We will see an example of this kind of combination in the case study.
 
 ## Digital vertical models
 
-```{r, echo=FALSE}
-library(raster)
-x <- raster(nrow=3,ncol=3,vals=1:9,crs="+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",xmn=0,xmx=300,ymn=0,ymx=300)
-writeRaster(x,"saddle.tif",overwrite=T,format='GTiff',datatype='INT1U')
-```
+**Digital Vertical Models (DVM)** represent vertical heights and elevations of terrain and features. As we learned from Chapter 2, *vertical* refers to the axis of geographic space that is orthogonal (i.e., perpendicular) to a vertical datum, such as a geoid or ellipsoid. Thus, a DVM may represent elevation of terrain or the height of a building. Both of these examples have specific meanings and calculations relative to the vertical datum, which we will explore in more detail in the following sections.
 
 ### Digital Elevation Models (DEM)
 
@@ -460,7 +456,7 @@ DiagrammeR::grViz("digraph {
 
 ```{r 9-MRVBF, echo=FALSE, out.width = '75%', fig.cap=fig_cap}
 fig_cap <- paste("Multi-resolution Valley Bottom Flatness (MRVBF) across the Chowade Watershed. Melser, CC-BY-SA-4.0.")
-knitr::include_graphics("images/09-MRVBF-new.png")
+knitr::include_graphics("images/09-MRVBF.png")
 ```
 
 Figures \@ref(fig:9-MRVBF-DEM-profile) and \@ref(fig:9-DEM-profile) below demonstrate the relationship between Elevation and MRVBF through a comparison of cross sections from both layers. As is shown by the cross-sections of MRVBF and the DEM, high MRVBF values are directly correlated with low slope and elevation areas in the DEM.
