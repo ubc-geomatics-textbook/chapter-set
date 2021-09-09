@@ -397,7 +397,7 @@ library(DiagrammeR)
 library(topoDistance)
 ```
 
-### Case Study: Topographic Indices for Wetland Mapping
+## Case Study: Topographic Indices for Wetland Mapping
 
 *Case Study Author: Ramon Melser (CC BY 4.0. unless otherwise indicated), University of British Columbia, Master of Geomatics for Environmental Management graduate, 2021*
 
