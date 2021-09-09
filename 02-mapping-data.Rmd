@@ -201,7 +201,7 @@ Because all map projections result in distortion from the loss of the third spat
 - **Azimuthal** projections preserve direction
 - **Equidistant** projections preserve scale and distances
 
-Some map projections can preserve several of these characteristics at once, but only a globe can simultaneously preserve area, direction, distance, and shape. Any map projection will have inherent trade-offs representing these characteristics accurately. It is beyond the scope of this textbook to discuss all map projections. Instead, we will focus on several key examples of map projections that are commonly used for environmental management applications. For a more comprehensive discussion of map projections generally, the reader is referred to *Map Projections: A Working Manual* by John Snyder (1987). In the next section, we look at how map projection distortation can be measured.
+Some map projections can preserve several of these characteristics at once, but only a globe can simultaneously preserve area, direction, distance, and shape. Any map projection will have inherent trade-offs representing these characteristics accurately. It is beyond the scope of this textbook to discuss all map projections. Instead, we will focus on several key examples of map projections that are commonly used for environmental management applications. For a more comprehensive discussion of map projections generally, the reader is referred to *Map Projections: A Working Manual* by [@snyder1987map]. In the next section, we look at how map projection distortation can be measured.
 
 ### Measuring map projection distortion
 
@@ -292,26 +292,6 @@ Azimuthal projections use a flat circular plane to project the Earth onto a map.
     knitr::include_graphics(here::here("images", "02-Azimuthal-map.png"))
 ```
 <br/>
-
-## Summary
-
-In this chapter, you learned about the science and technology of geodesy that goes into mapping data. We described the different models of Earth's shape and the advantages and disadvantages that each model has. More generally, models of Earth represent vertical datums to which heights are referenced. When we think of "where" something is on Earth, we must use horizontal datums to reference location. There are two types of horizontal datums that are very important to geomatics: (1) a geographic coordinate system uses lines of latitude and longitude to define locations on Earth's 3-dimensional surface while (2) a projected coordinate system flattens Earth into a manageable 2-dimensional coordinate space. In the case of projected coordinate systems, we have many choices when deciding which map projection to use when we map data, each with its own uses and distortions. The next time that you look at a map, ask yourself with your new found appreciation of geodesy, how is this information being misrepresented to me?
-
-### Reflection Questions {-}
-
-1. Describe the process of measuring the height of something on Earth.
-2. Explain the difference between a geographic coordinate system and a projected coordinate system.
-3. Name as many projected coordinate systems as you can.
-4. 
-
-### Practice Questions {-}
-
-1. Choose a continent to roughly draw and then draw a grid of latitude and longitude lines in 3 different projected coordinate systems on a piece of paper. Describe the distortions that you expect and point to where they appear on your continent.
-2. x`x`
-
-## Recommended Readings {-}
-
-Ensure all inline citations are properly referenced here.
 
 ```{r include=FALSE}
 knitr::write_bib(c(
