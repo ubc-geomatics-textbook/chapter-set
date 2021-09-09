@@ -1,6 +1,6 @@
 # Raster Analysis and Terrain Modelling {#raster-analysis-and-terrain-modelling}
 
-Elevation data are frequently collected in a raster format. In this chapter, we will look at how rasters can be analyzed with a specific focus on deriving terrain information from elevation rasters. We will explore some useful properties of the raster structure that can be exploited for insightful analysis of land and water alike. Image-based raster analysis will be a later topic of Chapter 14.
+Many data are frequently collected and represented in a raster format. In this chapter, we will look at how rasters can be analyzed with a specific focus on deriving terrain information from elevation rasters. We will explore some useful properties of the raster structure that can be exploited for insightful analysis of land and water alike. Image-based raster analysis will be a later topic of Chapter 14.
 
 :::: {.box-content .learning-objectives-content}
 
