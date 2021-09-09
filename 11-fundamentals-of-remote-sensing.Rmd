@@ -723,7 +723,7 @@ components of the environment, such as forest canopies and elevation
 [@coops2007]. More details regarding the theories and applications of
 LIDAR will be presented in Chapter 15.
 
-#### Case Study: Optical remote sensing to evaluate land cover in Canada {.unnumbered}
+### Case Study: Optical remote sensing to evaluate land cover in Canada {-}
 
 <p>
 
@@ -797,7 +797,6 @@ remote sensing in environmental assessment.
     fig_cap <- paste("Temporal sequences depicting landcover before and after (a) harvesting and (b) fire. The year of change is represented by 'Y'. Adapted from Hermosilla et al., 2018.")
     knitr::include_graphics(here::here("images", "11-hermo-disturbance.png"))
 ```
-:::
 
 ```{r include=FALSE}
 knitr::write_bib(c(
