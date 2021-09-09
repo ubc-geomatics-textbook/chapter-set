@@ -1,13 +1,3 @@
----
-editor_options:
-  markdown:
-    wrap: 72
-output:
-  word_document: default
-  html_document:
-    df_print: paged
----
-
 # Fundamentals of remote sensing {#fundamentals-of-remote-sensing}
 
 At some point in your life you may have wondered why the sky is blue.
@@ -25,17 +15,17 @@ questions.
 
 ::: {.box-content .learning-objectives-content}
 ::: {.box-title .learning-objectives-top}
-#### Learning Objectives {.unnumbered}
+#### Learning Objectives {-}
 :::
 
 1.  Understand key principles underpinning remote sensing science
-2.  Become familiar with specific types of energy used in RS
+2.  Become familiar with specific types of energy used in remote sensing
 3.  Define key interactions between energy and surface materials that
-    enable RS
-4.  Comprehend various considerations that effect the use of RS
+    enable remote sensing
+4.  Comprehend various considerations that effect the use of remote sensing
 :::
 
-### Key Terms {.unnumbered}
+### Key Terms {-}
 
 Electromagnetic, Energy, Photons, Pixel, Radiation, Resolution,
 Spectrum, Wavelength
@@ -57,7 +47,7 @@ that the sense of sight is simply a contracted version of reality from
 which the observer can interpret facts presented through transient
 images created by light. Over the next few centuries a variety of
 photosensitive chemicals were discovered which enabled the transient
-images humans see to be recorded . This technology was called
+images humans see to be recorded. This technology was called
 photography (see [A History of
 Photography](https://www.scienceandmediamuseum.org.uk/objects-and-stories/history-photography)).
 The ability to record the interaction of light and specific objects
@@ -177,12 +167,12 @@ temperature less than a theoretical blackbody.
 
 ::: {.box-content .call-out-content}
 ::: {.box-title .call-out-top}
-#### Call out {.unnumbered}
+#### Call out {-}
 :::
 
 <p>
 
-Visualizing the electromagnetic spectrum (EMS) in Figure 2 certainly
+Visualizing the electromagnetic spectrum (EMS) in Figure \@ref(fig:11-EMS) certainly
 enables a wonderful comprehension of many concepts relating to photons.
 Perhaps more astounding, however, is the truth of how the faculty of
 human vision has incorporated these properties. The portion of the EMS
@@ -494,6 +484,7 @@ Absorptance = 1 - Reflectance - Transmittance
 (\#eq:absorptance)
 \end{equation}
 ```
+
 Although relatively straight forward, these definitions allow us to
 start exploring a variety of remote sensing applications. In fact, most
 optical remote sensing techniques employ at least one of reflectance,
@@ -502,21 +493,6 @@ the next section, please review the work flow below highlighting what we
 have learned so far. In our next steps we will move from theory to
 application and begin to explore the factors that define the quality,
 and therefore capability, of remotely sensed data.
-
-::: {.box-content .your-turn-content}
-::: {.box-title .your-turn-top}
-#### Your turn! {.unnumbered}
-:::
-
-Calculate:
-
-1.  The number of zeros in 2.5 x 10-7
-
-2.  The **energy** (E) of a photon with a wavelength of 450 nm.
-
-3.  The absorptance value for a surface with a reflectance of 0.4 and a
-    transmittance of 0.35
-:::
 
 ## The Four Resolutions
 
@@ -667,7 +643,7 @@ of the photon is recorded as a digital number (DN) and the digital
 number is assigned to a pixel.
 
 A simple visualization of radiometric resolution would be to think of
-three colors: red, green and blue (Figure Cambridge in color). A sensor
+three colors: red, green and blue. A sensor
 detecting **energy** in the ranges of these three wavelengths would
 contain three separate detectors. Each detector is specialized to record
 **energy** in a single, unique range, say red (\~700 nm). The amount of
@@ -747,12 +723,7 @@ components of the environment, such as forest canopies and elevation
 [@coops2007]. More details regarding the theories and applications of
 LIDAR will be presented in Chapter 15.
 
-::: {.box-content .case-study-content}
-::: {.box-title .case-study-top}
-#### Case Study {.unnumbered}
-:::
-
-#### Optical remote sensing to evaluate land cover in Canada {.unnumbered}
+#### Case Study: Optical remote sensing to evaluate land cover in Canada {.unnumbered}
 
 <p>
 
@@ -827,36 +798,6 @@ remote sensing in environmental assessment.
     knitr::include_graphics(here::here("images", "11-hermo-disturbance.png"))
 ```
 :::
-
-## Summary
-
-In this chapter we have covered a variety of physical theories that
-support the use of electromagnetic **radiation** for the remote analysis
-of objects. These ideas provide the fundamental knowledge needed to
-employ remote sensing technologies. From sensor selection to data
-processing, your ability to perform remote sensing science will rely
-almost exclusively on your capacity to comprehend the relationships
-between the objects of interest and the physical properties that
-comprise them.
-
-In the next chapter you will enter the world of sensors and explore a
-vast amount of technologies that collect information remotely. This
-journey will include active and passive instruments, as well as examples
-of scientific studies that have successfully employed the data they
-collect. Much like a carpenter selecting the correct tool for a specific
-task, you will need apply your knowledge of the fundamentals to identify
-the best sensor for your research.
-
-### Reflection Questions
-
-1.  What section of the electromagnetic spectrum is adjacent to, but
-    shorter in wavelength than, what the human eye can see?
-2.  What is the general term used to describe the process that stops
-    large amounts of electromagnetic radiation from reaching the Earth's
-    surface. Name the three types?
-3.  List and describe the four resolutions.
-4.  Why is using the Best Available Pixel important for land cover
-    mapping?
 
 ```{r include=FALSE}
 knitr::write_bib(c(
