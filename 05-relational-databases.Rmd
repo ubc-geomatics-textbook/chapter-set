@@ -1,8 +1,4 @@
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r, include=FALSE}
 library("dplyr")
 library("rgdal")
 library("leaflet")
@@ -41,7 +37,7 @@ Suppose you have collected some data about some trees. You might have organized 
 
 Within a RDBMS, we find **relational databases**, which are highly structured tables comprised of rows and columns. In fact, a table in a relational database is called a **relation**, a row is a **tuple**, and a column is an **attribute**. Relational databases are a great way to store simple data structures that can be organized into a relation with tuples and attributes. When we say that a table or relation is "structured", we are referring to the fact that the data are organized according to a database **schema**, which is a set of constraints that ensure data integrity and consistency. For example, our set of trees likely all contain the same types of information and this can be easily organized into a relation. Suppose we measured the height, diameter at breast height (DBH), and species of each tree, then our relation would look like Figure \@ref(fig:5-tabular-data-spatial-data).
 
-```{r 5-tabular-data-spatial-data fig.cap = fig_cap, out.width= "75%", echo = FALSE}
+```{r 5-tabular-data-spatial-data, fig.cap = fig_cap, out.width= "75%", echo = FALSE}
     fig_cap <- paste("Tabular and spatial data are related by a Relational Database Management System (RDBMS) in a Geographic Information System (GIS). Images of Douglas-Fir and Western Hemlock trees by Natural Resources Canada, Canadian Forest Service, modified with permission.")
     knitr::include_graphics(here::here("images", "05-tabular-data-spatial-data.png"))
 ```
@@ -795,10 +791,6 @@ knitr::kable(
   caption = 'Query result shows five records matched the priority area requirements.'
 )
 ```
-
-## Recommended Readings {-}
-
-**
 
 ```{r include=FALSE}
 knitr::write_bib(c(
