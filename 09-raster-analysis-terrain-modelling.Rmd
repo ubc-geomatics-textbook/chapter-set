@@ -75,6 +75,7 @@ Raster functions are algorithms that perform operations on one or more cells of 
 A **local function** is the simplest to understand because each cell in the input raster is operated on independently of all other cells. Simple arithmetic operations such as addition, subtraction, division, and multiplication are all examples of focal functions when applied to a raster. 
 
 ```{r, echo=FALSE}
+library(raster)
 x <- raster(nrow=5,ncol=5,crs="+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",xmn=0,xmx=300,ymn=0,ymx=300)
 values(x) <- sample(1:255, ncell(x))
 par(mfrow=c(1,2))
